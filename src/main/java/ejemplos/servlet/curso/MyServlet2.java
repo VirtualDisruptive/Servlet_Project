@@ -13,7 +13,8 @@ public class MyServlet2 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		String name = String.valueOf(request.getParameter("name"));
+		String lname = String.valueOf(request.getParameter("lname"));
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
@@ -22,6 +23,8 @@ public class MyServlet2 extends HttpServlet {
 		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
 		out.println("<body>");
 		out.println("<h1>Bienvenido!!</h1>");
+		out.println(name);
+		out.println( lname);
 	}
 
 }
