@@ -17,7 +17,6 @@ public class MyServlet2 extends HttpServlet {
 		String lname = String.valueOf(request.getParameter("lname"));
 		request.setAttribute("name", name);
 		request.setAttribute("lname", lname);
-
 		response.setContentType("text/html; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
